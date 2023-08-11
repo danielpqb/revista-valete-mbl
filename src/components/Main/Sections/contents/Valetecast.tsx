@@ -35,8 +35,8 @@ function Brief() {
 
 function List() {
   return (
-    <div className="flex flex-col items-center gap-[2.5rem]">
-      <h1 className="text-[2.5rem] leading-[3rem]">
+    <div className="flex flex-col items-center gap-[2.5rem] mb-[6rem]">
+      <h1 className="text-[2.5rem] leading-[3rem] font-bold">
         Abaixo a nossa lista de podcasts
       </h1>
       <div className="w-[52rem] h-[50rem] font-bold bg-white-primary rounded-[0.5rem]">

@@ -13,6 +13,7 @@ const config: Config = {
         calisto: ["Calisto MT"],
         roboto: ["Roboto"],
         inter: ["Inter"],
+        montserrat: ["Montserrat"],
       },
       colors: {
         white: { primary: "#F5F3EC", secondary: "#EDEBE4" },

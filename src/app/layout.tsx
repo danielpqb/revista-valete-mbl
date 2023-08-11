@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className="relative bg-white-primary text-black-primary font-calisto">
+      <body className="bg-white-primary text-black-primary font-calisto">
         <BackgroundSections />
         {children}
       </body>
@@ -22,7 +22,9 @@ function BackgroundSections() {
   return (
     <div className="flex flex-col absolute w-full -z-10">
       <div className="bg-white-primary h-[92rem]" />
-      <div className="bg-white-secondary h-[92rem]" />
+      <div className="bg-white-secondary h-[86rem]" />
+      <div className="bg-white-primary h-[374rem]" />
+      <div className="bg-white-secondary h-[80rem]" />
     </div>
   );
 }

@@ -6,8 +6,8 @@ interface MainProps extends ComponentProps<"main"> {}
 
 export function Main(props: MainProps) {
   return (
-    <main className="w-full h-screen flex flex-col m-auto items-center pt-[11rem] gap-[6rem]">
-      <Poster />
+    <main className="w-full flex flex-col m-auto items-center pt-[11rem] gap-[6rem] mb-[5rem]">
+      <PosterTop />
       <Section.Root
         id="concept"
         title="Conceito"
@@ -20,11 +20,30 @@ export function Main(props: MainProps) {
       >
         <Section.Valetecast />
       </Section.Root>
+      <Section.Root
+        id="columnists"
+        title="Colunistas"
+      >
+        <Section.Columnists />
+      </Section.Root>
+      <Section.Root
+        id="founders"
+        title="Fundadores"
+      >
+        <Section.Founders />
+      </Section.Root>
+      <PosterBottom />
+      <Section.Root
+        id="doubts"
+        title="Dúvidas"
+      >
+        <Section.Doubts />
+      </Section.Root>
     </main>
   );
 }
 
-function Poster() {
+function PosterTop() {
   return (
     <div className="relative m-auto w-full max-w-6xl">
       <div className="absolute w-[37rem] pl-[6.25rem] pt-[3.5rem]">
@@ -41,6 +60,14 @@ function Poster() {
         </div>
       </div>
       <img src="/images/img001.svg"></img>
+    </div>
+  );
+}
+
+function PosterBottom() {
+  return (
+    <div className="relative m-auto w-full max-w-6xl">
+      <img src="/images/img003.svg"></img>
     </div>
   );
 }
