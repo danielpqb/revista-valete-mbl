@@ -45,7 +45,6 @@ export function Header(props: HeaderProps) {
     </header>
   );
 }
-
 interface SectionLabelProps extends ComponentProps<"button"> {
   section: { id: string; title: string };
   selectedSection: string;
