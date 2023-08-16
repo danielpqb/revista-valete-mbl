@@ -1,6 +1,7 @@
 import { ComponentProps } from "react";
 import { CustomIcon } from "../CustomIcons/CustomIcons";
 import IonIcon from "../IonIcon/IonIcon";
+import NextLink from "next/link";
 
 interface FooterProps extends ComponentProps<"footer"> {}
 export function Footer(props: FooterProps) {
@@ -36,23 +37,48 @@ export function Footer(props: FooterProps) {
             Assine a Valete e nos siga nas redes
           </h1>
           <div className="flex fill-white-primary gap-[1rem]">
-            <CustomIcon.Facebook className="text-[1.25rem]" />
-            <IonIcon
-              name="logo-youtube"
-              className="text-[1.25rem]"
-            />
-            <IonIcon
-              name="logo-instagram"
-              className="text-[1.25rem]"
-            />
-            <IonIcon
-              name="logo-twitter"
-              className="text-[1.25rem]"
-            />
-            <IonIcon
-              name="logo-twitch"
-              className="text-[1.25rem]"
-            />
+            <NextLink
+              href="https://www.facebook.com/mblivre"
+              target="_blank"
+            >
+              <CustomIcon.Facebook className="text-[1.25rem]" />
+            </NextLink>
+            <NextLink
+              href="https://www.youtube.com/@mblivre"
+              target="_blank"
+            >
+              <IonIcon
+                name="logo-youtube"
+                className="text-[1.25rem]"
+              />
+            </NextLink>
+            <NextLink
+              href="https://www.instagram.com/mblivre/"
+              target="_blank"
+            >
+              <IonIcon
+                name="logo-instagram"
+                className="text-[1.25rem]"
+              />
+            </NextLink>
+            <NextLink
+              href="https://twitter.com/MBLivre"
+              target="_blank"
+            >
+              <IonIcon
+                name="logo-twitter"
+                className="text-[1.25rem]"
+              />
+            </NextLink>
+            <NextLink
+              href="https://www.twitch.tv/mblivre"
+              target="_blank"
+            >
+              <IonIcon
+                name="logo-twitch"
+                className="text-[1.25rem]"
+              />
+            </NextLink>
           </div>
         </div>
       </div>

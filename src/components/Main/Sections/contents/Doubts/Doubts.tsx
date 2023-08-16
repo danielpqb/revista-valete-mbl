@@ -82,12 +82,9 @@ function Contact() {
       <div className="font-roboto font-light text-[1.125rem] leading-[1.68rem]">
         <p>
           Envie para{" "}
-          <Link
-            className="text-blue-secondary underline"
-            href={""}
-          >
+          <span className="text-blue-secondary underline">
             revistavalete@mbl.org.br
-          </Link>{" "}
+          </span>{" "}
           e responderemos em breve.
         </p>
         <p>Nosso F.A.Q. será periodicamente atualizado.</p>

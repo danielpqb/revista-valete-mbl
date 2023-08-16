@@ -1,5 +1,6 @@
 import { CustomIcon } from "@/components/CustomIcons/CustomIcons";
 import IonIcon from "@/components/IonIcon/IonIcon";
+import NextLink from "next/link";
 
 export function Concept() {
   return (
@@ -26,23 +27,48 @@ function FollowUs() {
     <div className="flex flex-col gap-[1.5rem] items-center w-fit">
       <h1 className="text-[1.125rem] font-bold">Siga-nos</h1>
       <div className="flex flex-col gap-[2.5rem]">
-        <CustomIcon.Facebook className="text-[1.5rem]" />
-        <IonIcon
-          name="logo-youtube"
-          className="text-[1.5rem]"
-        />
-        <IonIcon
-          name="logo-instagram"
-          className="text-[1.5rem]"
-        />
-        <IonIcon
-          name="logo-twitter"
-          className="text-[1.5rem]"
-        />
-        <IonIcon
-          name="logo-twitch"
-          className="text-[1.5rem]"
-        />
+        <NextLink
+          href="https://www.facebook.com/mblivre"
+          target="_blank"
+        >
+          <CustomIcon.Facebook className="text-[1.5rem]" />
+        </NextLink>
+        <NextLink
+          href="https://www.youtube.com/@mblivre"
+          target="_blank"
+        >
+          <IonIcon
+            name="logo-youtube"
+            className="text-[1.5rem]"
+          />
+        </NextLink>
+        <NextLink
+          href="https://www.instagram.com/mblivre/"
+          target="_blank"
+        >
+          <IonIcon
+            name="logo-instagram"
+            className="text-[1.5rem]"
+          />
+        </NextLink>
+        <NextLink
+          href="https://twitter.com/MBLivre"
+          target="_blank"
+        >
+          <IonIcon
+            name="logo-twitter"
+            className="text-[1.5rem]"
+          />
+        </NextLink>
+        <NextLink
+          href="https://www.twitch.tv/mblivre"
+          target="_blank"
+        >
+          <IonIcon
+            name="logo-twitch"
+            className="text-[1.5rem]"
+          />
+        </NextLink>
       </div>
     </div>
   );
