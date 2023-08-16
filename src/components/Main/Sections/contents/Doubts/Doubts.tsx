@@ -1,6 +1,5 @@
-import { Hearts } from "@/components/CardSuits/Hearts";
 import Link from "next/link";
-import { ComponentProps } from "react";
+import { FAQ } from "./FAQ";
 
 const mock = [
   {
@@ -68,26 +67,6 @@ function FAQsContainer() {
           );
         })}
       </div>
-    </div>
-  );
-}
-
-interface DivProps extends ComponentProps<"div"> {
-  answer: { title: string; text: string };
-  isOpen?: boolean;
-}
-function FAQ(props: DivProps) {
-  return (
-    <div className="border-[1px] border-blue-secondary">
-      <div className="flex justify-between bg-blue-secondary h-[3rem] px-[1.375rem] py-[0.5rem] text-white-primary font-semibold leading-normal text-[1.125rem]">
-        <p className="flex items-center h-full">{props.answer.title}</p>
-        <Hearts className="fill-white-primary" />
-      </div>
-      {props.isOpen && props.answer.text && (
-        <div className="h-fit p-5">
-          <p>{props.answer.text}</p>
-        </div>
-      )}
     </div>
   );
 }

@@ -1,4 +1,5 @@
-import { Clubs } from "@/components/CardSuits/Clubs";
+import { CustomIcon } from "@/components/CustomIcons/CustomIcons";
+import IonIcon from "@/components/IonIcon/IonIcon";
 
 export function Concept() {
   return (
@@ -22,14 +23,26 @@ export function Concept() {
 
 function FollowUs() {
   return (
-    <div className="flex flex-col gap-[1rem] items-center w-fit">
+    <div className="flex flex-col gap-[1.5rem] items-center w-fit">
       <h1 className="text-[1.125rem] font-bold">Siga-nos</h1>
       <div className="flex flex-col gap-[2.5rem]">
-        <Clubs className="w-6 h-6" />
-        <Clubs className="w-6 h-6" />
-        <Clubs className="w-6 h-6" />
-        <Clubs className="w-6 h-6" />
-        <Clubs className="w-6 h-6" />
+        <CustomIcon.Facebook className="text-[1.5rem]" />
+        <IonIcon
+          name="logo-youtube"
+          className="text-[1.5rem]"
+        />
+        <IonIcon
+          name="logo-instagram"
+          className="text-[1.5rem]"
+        />
+        <IonIcon
+          name="logo-twitter"
+          className="text-[1.5rem]"
+        />
+        <IonIcon
+          name="logo-twitch"
+          className="text-[1.5rem]"
+        />
       </div>
     </div>
   );

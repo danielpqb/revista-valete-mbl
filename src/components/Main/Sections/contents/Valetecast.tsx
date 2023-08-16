@@ -1,4 +1,5 @@
-import { Hearts } from "@/components/CardSuits/Hearts";
+import { CustomIcon } from "@/components/CustomIcons/CustomIcons";
+import IonIcon from "@/components/IonIcon/IonIcon";
 
 export function Valetecast() {
   return (
@@ -22,11 +23,11 @@ function Brief() {
           Disponível no
         </h1>
         <div className="flex gap-[3rem]">
-          <Hearts className="w-[1.75rem]" />
-          <Hearts className="w-[1.75rem]" />
-          <Hearts className="w-[1.75rem]" />
-          <Hearts className="w-[1.75rem]" />
-          <Hearts className="w-[1.75rem]" />
+          <CustomIcon.AmazonMusic className="text-[1.75rem]" />
+          <CustomIcon.Podcast1 className="text-[1.75rem]" />
+          <CustomIcon.Podcast2 className="text-[1.75rem]" />
+          <CustomIcon.Podcast3 className="text-[1.75rem]" />
+          <CustomIcon.Spotify className="text-[1.75rem]" />
         </div>
       </div>
     </div>

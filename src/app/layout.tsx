@@ -24,7 +24,7 @@ function BackgroundSections() {
       <div className="bg-white-primary h-[92rem]" />
       <div className="bg-white-secondary h-[86rem]" />
       <div className="bg-white-primary h-[374rem]" />
-      <div className="bg-white-secondary h-[80rem]" />
+      <div className="bg-white-secondary h-[75rem]" />
     </div>
   );
 }
