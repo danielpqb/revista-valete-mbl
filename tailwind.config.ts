@@ -10,10 +10,10 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        calisto: ["Calisto MT"],
-        roboto: ["Roboto"],
-        inter: ["Inter"],
-        montserrat: ["Montserrat"],
+        calisto: ["var(--font-calisto)"],
+        roboto: ["var(--font-roboto)"],
+        inter: ["var(--font-inter)"],
+        montserrat: ["var(--font-montserrat)"],
       },
       colors: {
         white: { primary: "#F5F3EC", secondary: "#EDEBE4" },

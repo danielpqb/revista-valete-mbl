@@ -1,5 +1,4 @@
 import { CustomIcon } from "@/components/CustomIcons/CustomIcons";
-import IonIcon from "@/components/IonIcon/IonIcon";
 
 export function Valetecast() {
   return (
@@ -42,12 +41,9 @@ function List() {
       </h1>
       <div className="w-[52rem] h-[50rem] font-bold bg-white-primary rounded-[0.5rem]">
         <div>Head</div>
-        <div className="m-3 p-3 border-brown-primary border-[1px]">Podcast</div>
-        <div className="m-3 p-3 border-brown-primary border-[1px]">Podcast</div>
-        <div className="m-3 p-3 border-brown-primary border-[1px]">Podcast</div>
-        <div className="m-3 p-3 border-brown-primary border-[1px]">Podcast</div>
-        <div className="m-3 p-3 border-brown-primary border-[1px]">Podcast</div>
-        <div className="m-3 p-3 border-brown-primary border-[1px]">Podcast</div>
+        <div className="m-3 p-3 border-brown-primary border-[1px] rounded-[0.5rem]">
+          Podcast
+        </div>
       </div>
     </div>
   );

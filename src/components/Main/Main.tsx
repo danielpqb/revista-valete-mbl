@@ -66,7 +66,7 @@ function PosterTop() {
           <span className="font-inter">Renovação automática</span>
         </div>
       </div>
-      <img src="/images/img001.svg"></img>
+      <img src="/images/poster01/img001.svg"></img>
     </div>
   );
 }
