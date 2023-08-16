@@ -9,27 +9,27 @@ const mock = [
   {
     title:
       "Como funciona o sistema de descontos para quem é assinante da Valente?",
-    text: "",
+    text: "A assinatura da Valete é o plano premium do Clube MBL e lhe dá acesso a entrada gratuita a todos os eventos do MBL, inclusive os congressos estaduais e o Nacional no fim do ano.",
   },
   {
     title: "Se eu assinar a Valete levo o Clube MBL de graça?",
-    text: "",
+    text: "Sim. A Valete é uma revista por assinatura que inclui o acesso ao Clube MBL. Clique no site Clube MBL – Entre para a maior comunidade política do Brasil! e conheça mais.",
   },
   {
     title: "Mudei de endereço. Como faço para receber minha Valete?",
-    text: "",
+    text: "Se você mudar de endereço envie um e-mail para o endereço valete@mbl.org.br",
   },
   {
     title: "Ainda não recebi minha revista. O que está acontecendo?",
-    text: "",
+    text: "Se você não recebeu envie um e-mail para o endereço valete@mbl.org.br. Sanaremos suas dúvidas e enviaremos o código de rastreio caso sua revista esteja a caminho.",
   },
   {
     title: "Consigo comprar as edições anteriores da revista?",
-    text: "",
+    text: "Infelizmente, não temos as edições antigas para venda.",
   },
   {
     title: "Quando teremos a revista nas bancas?",
-    text: "",
+    text: "Provavelmente, em 2024 estreamos a Valete em livrarias e bancas de jornais. Mas as edições atuais somente via assinatura.",
   },
 ];
 

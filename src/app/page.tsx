@@ -7,7 +7,9 @@ import { useEffect } from "react";
 
 export default function Home() {
   useEffect(() => {
-    setCssVariables();
+    setInterval(() => {
+      setCssVariables();
+    }, 1000);
   }, []);
 
   return (

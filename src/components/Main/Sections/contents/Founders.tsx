@@ -29,8 +29,8 @@ export function Founders() {
         //Name
         return (
           <div
-            className="font-roboto"
             key={index}
+            className="font-roboto"
           >
             {name}
           </div>
@@ -39,7 +39,10 @@ export function Founders() {
 
       //GroupNames
       array.push(
-        <div className="flex flex-col w-[10rem] flex-[1 1 80px]">
+        <div
+          key={key}
+          className="flex flex-col w-[10rem] flex-[1 1 80px]"
+        >
           <span className="leading-none text-[2.5rem] font-bold">{key}</span>
           <span className="w-full h-[0.0625rem] bg-black-primary mb-2"></span>
           {jsxGroup}

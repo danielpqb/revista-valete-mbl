@@ -4,6 +4,7 @@ import { sections } from "@/data/sections";
 import { ComponentProps, Dispatch, SetStateAction, useState } from "react";
 import IonIcon from "../IonIcon/IonIcon";
 import { CustomIcon } from "../CustomIcons/CustomIcons";
+import NextLink from "next/link";
 import { Link } from "react-scroll";
 
 interface HeaderProps extends ComponentProps<"header"> {}
@@ -19,9 +20,14 @@ export function Header(props: HeaderProps) {
       <div className="w-full h-24 relative flex justify-center font-roboto font-semibold text-[0.875rem]">
         <div className="w-full max-w-6xl flex justify-end gap-[1.5rem]">
           <div className="flex items-center">
-            <button className="bg-blue-secondary text-white-primary px-4 py-2">
-              Assine a Valete
-            </button>
+            <NextLink
+              href={"https://clube.mbl.org.br/pagamento?off=43uioh"}
+              target="_blank"
+            >
+              <div className="bg-blue-secondary text-white-primary px-4 py-2">
+                Assine a Valete
+              </div>
+            </NextLink>
           </div>
           <div className="flex items-center gap-[0.5rem]">
             <CustomIcon.User className="text-[1.25rem]" />
@@ -60,6 +66,27 @@ interface SectionLabelProps extends ComponentProps<"button"> {
   setSelectedSection: Dispatch<SetStateAction<string>>;
 }
 function SectionLabel(props: SectionLabelProps) {
+  if (props.section.id === "events") {
+    return (
+      <NextLink
+        href={"https://revistavalete.com/"}
+        target="_blank"
+      >
+        <button
+          onClick={() => {
+            props.setSelectedSection(props.section.id);
+          }}
+          className={`px-6 h-full ${
+            props.selectedSection === props.section.id &&
+            "border-b-[0.125rem] border-black-primary "
+          }`}
+        >
+          {props.section.title}
+        </button>
+      </NextLink>
+    );
+  }
+
   return (
     <Link
       to={props.section.id}
