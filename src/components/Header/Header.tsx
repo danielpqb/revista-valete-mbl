@@ -43,7 +43,7 @@ export function Header(props: HeaderProps) {
           </div>
         </div>
       </div>
-      <div className="flex flex-1 items-center justify-center">
+      <div className="flex flex-1 items-center justify-center font-normal text-[1rem]">
         {sections.map((section, index) => {
           return (
             <SectionLabel
@@ -71,15 +71,17 @@ function SectionLabel(props: SectionLabelProps) {
       <NextLink
         href={"https://revistavalete.com/"}
         target="_blank"
+        className="h-full"
       >
         <button
+          style={{
+            borderBottomWidth:
+              props.selectedSection === props.section.id ? "0.2rem" : "0rem",
+          }}
           onClick={() => {
             props.setSelectedSection(props.section.id);
           }}
-          className={`px-6 h-full ${
-            props.selectedSection === props.section.id &&
-            "border-b-[0.125rem] border-black-primary "
-          }`}
+          className="px-6 h-full border-black-primary"
         >
           {props.section.title}
         </button>
@@ -89,6 +91,7 @@ function SectionLabel(props: SectionLabelProps) {
 
   return (
     <Link
+      className="h-full"
       to={props.section.id}
       spy={true}
       smooth={true}
@@ -96,13 +99,14 @@ function SectionLabel(props: SectionLabelProps) {
       duration={500}
     >
       <button
+        style={{
+          borderBottomWidth:
+            props.selectedSection === props.section.id ? "0.2rem" : "0rem",
+        }}
         onClick={() => {
           props.setSelectedSection(props.section.id);
         }}
-        className={`px-6 h-full ${
-          props.selectedSection === props.section.id &&
-          "border-b-[0.125rem] border-black-primary "
-        }`}
+        className="px-6 h-full border-black-primary"
       >
         {props.section.title}
       </button>

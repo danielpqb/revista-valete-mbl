@@ -46,8 +46,8 @@ function BackgroundSections() {
   return (
     <div className="flex flex-col absolute w-full -z-10">
       <div className="bg-white-primary h-[92rem]" />
-      <div className="bg-white-secondary h-[86rem]" />
-      <div className="bg-white-primary h-[405rem]" />
+      <div className="bg-white-secondary h-[110rem]" />
+      <div className="bg-white-primary h-[410rem]" />
     </div>
   );
 }

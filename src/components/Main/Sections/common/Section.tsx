@@ -2,7 +2,7 @@ import { ComponentProps } from "react";
 import { Title } from "./Title";
 import { Concept } from "../contents/Concept";
 import { Doubts } from "../contents/Doubts/Doubts";
-import { Valetecast } from "../contents/Valetecast";
+import { Valetecast } from "../contents/Valetecast/Valetecast";
 import { Founders } from "../contents/Founders";
 import { Columnists } from "../contents/Columnists/Columnists";
 import { Events } from "../contents/Events";

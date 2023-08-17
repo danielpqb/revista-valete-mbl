@@ -1,4 +1,5 @@
 import { CustomIcon } from "@/components/CustomIcons/CustomIcons";
+import { List } from "./List";
 
 export function Valetecast() {
   return (
@@ -27,22 +28,6 @@ function Brief() {
           <CustomIcon.Podcast2 className="text-[1.75rem]" />
           <CustomIcon.Podcast3 className="text-[1.75rem]" />
           <CustomIcon.Spotify className="text-[1.75rem]" />
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function List() {
-  return (
-    <div className="flex flex-col items-center gap-[2.5rem] mb-[6rem]">
-      <h1 className="text-[2.5rem] leading-[3rem] font-bold">
-        Abaixo a nossa lista de podcasts
-      </h1>
-      <div className="w-[52rem] h-[50rem] font-bold bg-white-primary rounded-[0.5rem]">
-        <div>Head</div>
-        <div className="m-3 p-3 border-brown-primary border-[1px] rounded-[0.5rem]">
-          Podcast
         </div>
       </div>
     </div>
