@@ -31,7 +31,7 @@ function FollowUs() {
           href="https://www.facebook.com/mblivre"
           target="_blank"
         >
-          <CustomIcon.Facebook className="text-[1.5rem]" />
+          <CustomIcon.Facebook className="text-[1.5rem] active:scale-[0.9] select-none" />
         </NextLink>
         <NextLink
           href="https://www.youtube.com/@mblivre"
@@ -39,7 +39,7 @@ function FollowUs() {
         >
           <IonIcon
             name="logo-youtube"
-            className="text-[1.5rem]"
+            className="text-[1.5rem] active:scale-[0.9] select-none"
           />
         </NextLink>
         <NextLink
@@ -48,7 +48,7 @@ function FollowUs() {
         >
           <IonIcon
             name="logo-instagram"
-            className="text-[1.5rem]"
+            className="text-[1.5rem] active:scale-[0.9] select-none"
           />
         </NextLink>
         <NextLink
@@ -57,7 +57,7 @@ function FollowUs() {
         >
           <IonIcon
             name="logo-twitter"
-            className="text-[1.5rem]"
+            className="text-[1.5rem] active:scale-[0.9] select-none"
           />
         </NextLink>
         <NextLink
@@ -66,7 +66,7 @@ function FollowUs() {
         >
           <IonIcon
             name="logo-twitch"
-            className="text-[1.5rem]"
+            className="text-[1.5rem] active:scale-[0.9] select-none"
           />
         </NextLink>
       </div>

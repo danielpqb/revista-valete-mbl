@@ -12,7 +12,7 @@ export function FAQ(props: DivProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border-[1px] border-blue-secondary">
+    <div className="border-[1px] border-blue-secondary cursor-pointer">
       <div
         onClick={() => setIsOpen(!isOpen)}
         className="flex justify-between bg-blue-secondary h-[3rem] px-[1.375rem] py-[0.5rem] text-white-primary font-semibold leading-normal text-[1.125rem]"

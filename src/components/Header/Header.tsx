@@ -24,17 +24,17 @@ export function Header(props: HeaderProps) {
               href={"https://clube.mbl.org.br/pagamento?off=43uioh"}
               target="_blank"
             >
-              <div className="bg-blue-secondary text-white-primary px-4 py-2">
+              <div className="bg-blue-secondary text-white-primary px-4 py-2 active:scale-[0.9] select-none">
                 Assine a Valete
               </div>
             </NextLink>
           </div>
           <div className="flex items-center gap-[0.5rem]">
             <CustomIcon.User className="text-[1.25rem]" />
-            <button className="">Login</button>
+            <button className="active:scale-[0.9] select-none">Login</button>
           </div>
           <div className="flex items-center">
-            <button className="">
+            <button className="active:scale-[0.9] select-none">
               <IonIcon
                 name="search-outline"
                 className="text-[1.25rem]"

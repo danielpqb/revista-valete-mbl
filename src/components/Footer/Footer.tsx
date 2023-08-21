@@ -41,7 +41,7 @@ export function Footer(props: FooterProps) {
               href="https://www.facebook.com/mblivre"
               target="_blank"
             >
-              <CustomIcon.Facebook className="text-[1.25rem]" />
+              <CustomIcon.Facebook className="text-[1.25rem] active:scale-[0.9] select-none" />
             </NextLink>
             <NextLink
               href="https://www.youtube.com/@mblivre"
@@ -49,7 +49,7 @@ export function Footer(props: FooterProps) {
             >
               <IonIcon
                 name="logo-youtube"
-                className="text-[1.25rem]"
+                className="text-[1.25rem] active:scale-[0.9] select-none"
               />
             </NextLink>
             <NextLink
@@ -58,7 +58,7 @@ export function Footer(props: FooterProps) {
             >
               <IonIcon
                 name="logo-instagram"
-                className="text-[1.25rem]"
+                className="text-[1.25rem] active:scale-[0.9] select-none"
               />
             </NextLink>
             <NextLink
@@ -67,7 +67,7 @@ export function Footer(props: FooterProps) {
             >
               <IonIcon
                 name="logo-twitter"
-                className="text-[1.25rem]"
+                className="text-[1.25rem] active:scale-[0.9] select-none"
               />
             </NextLink>
             <NextLink
@@ -76,7 +76,7 @@ export function Footer(props: FooterProps) {
             >
               <IonIcon
                 name="logo-twitch"
-                className="text-[1.25rem]"
+                className="text-[1.25rem] active:scale-[0.9] select-none"
               />
             </NextLink>
           </div>

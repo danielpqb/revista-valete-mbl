@@ -55,7 +55,7 @@ function PosterTop() {
           href={"https://clube.mbl.org.br/pagamento?off=43uioh"}
           target="_blank"
         >
-          <div className="flex w-fit bg-blue-secondary text-white-primary px-4 py-2 font-semibold font-roboto mb-[0.8rem] gap-[0.5rem]">
+          <div className="flex w-fit bg-blue-secondary text-white-primary px-4 py-2 font-semibold font-roboto mb-[0.8rem] gap-[0.5rem] active:scale-[0.9] select-none">
             <h1>Assine a Valete</h1>
             <IonIcon name="arrow-forward"></IonIcon>
           </div>
