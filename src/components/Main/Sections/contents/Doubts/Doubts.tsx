@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { FAQ } from "./FAQ";
 
 const mock = [
@@ -35,10 +34,11 @@ const mock = [
 
 export function Doubts() {
   return (
-    <div className="flex flex-col gap-[4rem] items-center">
+    <div className="relative flex flex-col gap-[4rem] items-center">
       <Title />
       <FAQsContainer />
       <Contact />
+      <Background />
     </div>
   );
 }
@@ -90,5 +90,11 @@ function Contact() {
         <p>Nosso F.A.Q. será periodicamente atualizado.</p>
       </div>
     </div>
+  );
+}
+
+function Background() {
+  return (
+    <div className="absolute bg-white-secondary w-[var(--vw)] h-[calc(100%+23.5rem)] -z-10 left-[calc((var(--vw)-100%)*-0.5)] top-[-13.5rem]"></div>
   );
 }

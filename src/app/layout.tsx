@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { ReactNode } from "react";
 import { Inter, Montserrat, Roboto } from "next/font/google";
 import localFont from "next/font/local";
+import ContextProviders from "./contexts";
 
 export const metadata: Metadata = {
   title: "Valete",
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 const calistoMT = localFont({
-  src: "../fonts/CalistoMT.ttf",
+  src: "../assets/fonts/CalistoMT.ttf",
   variable: "--font-calisto",
 });
 const roboto = Roboto({
@@ -33,21 +34,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body
-        className={`${calistoMT.variable} ${roboto.variable} ${inter.variable} ${montserrat.variable} bg-white-secondary text-black-primary font-calisto`}
+        className={`${calistoMT.variable} ${roboto.variable} ${inter.variable} ${montserrat.variable} bg-white-primary text-black-primary font-calisto`}
       >
-        <BackgroundSections />
-        {children}
+        <ContextProviders>{children}</ContextProviders>
       </body>
     </html>
-  );
-}
-
-function BackgroundSections() {
-  return (
-    <div className="flex flex-col absolute w-full -z-10">
-      <div className="bg-white-primary h-[92rem]" />
-      <div className="bg-white-secondary h-[110rem]" />
-      <div className="bg-white-primary h-[410rem]" />
-    </div>
   );
 }

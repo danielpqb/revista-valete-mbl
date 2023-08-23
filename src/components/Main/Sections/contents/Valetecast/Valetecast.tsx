@@ -3,9 +3,10 @@ import { List } from "./List";
 
 export function Valetecast() {
   return (
-    <div className="flex flex-col gap-[4rem]">
+    <div className="relative flex flex-col gap-[4rem]">
       <Brief />
       <List />
+      <Background />
     </div>
   );
 }
@@ -31,5 +32,11 @@ function Brief() {
         </div>
       </div>
     </div>
+  );
+}
+
+function Background() {
+  return (
+    <div className="absolute bg-white-secondary w-[var(--vw)] h-[calc(100%+13.5rem)] -z-10 left-[calc((var(--vw)-100%)*-0.5)] top-[-13.5rem]"></div>
   );
 }
