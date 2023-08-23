@@ -6,17 +6,17 @@ export function Concept() {
   return (
     <div className="flex gap-[2.5rem] sm:flex-col">
       <div className="flex flex-col flex-1 gap-[2.5rem]">
-        <h1 className="text-[2.5rem] font-bold leading-[3rem]">
+        <h1 className="text-[2.5rem] font-bold leading-[3rem] sm:text-[1.5rem] sm:leading-[1.8rem] sm:text-center sm:px-[10%]">
           Com edição exclusivamente impressa, a Revista Valete é única!
         </h1>
-        <div className="font-roboto flex gap-[2rem]">
+        <div className="font-roboto flex gap-[2rem] sm:flex sm:flex-col">
           <FollowUs />
           <Text />
         </div>
       </div>
       <img
         src="/images/img002.png"
-        className="w-[30rem] h-[40rem]"
+        className="w-[30rem] h-[40rem] sm:w-full sm:h-fit"
       />
     </div>
   );
@@ -24,9 +24,9 @@ export function Concept() {
 
 function FollowUs() {
   return (
-    <div className="flex flex-col gap-[1.5rem] items-center w-fit">
+    <div className="flex flex-col gap-[1.5rem] items-center w-fit sm:w-full sm:gap-[1rem]">
       <h1 className="text-[1.125rem] font-bold">Siga-nos</h1>
-      <div className="flex flex-col gap-[2.5rem]">
+      <div className="flex flex-col gap-[2.5rem] sm:flex-row">
         <NextLink
           href="https://www.facebook.com/mblivre"
           target="_blank"
@@ -76,7 +76,7 @@ function FollowUs() {
 
 function Text() {
   return (
-    <div className="flex flex-1 flex-col px-1 font-light text-[1.125rem] leading-[1.8rem]">
+    <div className="flex flex-1 flex-col px-1 font-light text-[1.125rem] leading-[1.8rem] sm:text-[1rem] sm:leading-[1.6rem]">
       <p>
         A Revista Valete nasce na contramão de boa parte dos projetos do nosso
         campo político. Assim como o MBL, é algo sui generis. A publicação traz
