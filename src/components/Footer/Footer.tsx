@@ -6,13 +6,13 @@ import NextLink from "next/link";
 interface FooterProps extends ComponentProps<"footer"> {}
 export function Footer(props: FooterProps) {
   return (
-    <footer className="flex w-full h-[14rem] bg-black-primary text-white-primary">
-      <div className="flex w-full items-center justify-between max-w-6xl m-auto h-full">
+    <footer className="flex w-full h-[14rem] bg-black-primary text-white-primary sm:h-fit sm:p-0 sm:pt-[4rem] sm:pb-[2rem]">
+      <div className="flex w-full items-center justify-between max-w-6xl m-auto h-full sm:flex-col sm:m-0 sm:gap-[1.5rem]">
         <img
           className="h-[5rem]"
           src="/images/img004.svg"
         ></img>
-        <div className="flex flex-col gap-[3rem] self-start pt-[4.5rem]">
+        <div className="flex flex-col gap-[3rem] self-start pt-[4.5rem] sm:p-0 sm:w-full sm:items-center">
           <h1 className="w-[20rem] tracking-[0.075rem] text-[1.5rem] font-normal leading-[1.8rem] uppercase text-center">
             A primeira revista de direita do Brasil
           </h1>

@@ -15,7 +15,7 @@ export function List() {
       <h1 className="text-[2.5rem] leading-[3rem] font-bold">
         Abaixo a nossa lista de podcasts
       </h1>
-      <div className="flex flex-col w-[52rem] h-fit font-bold bg-white-primary rounded-[0.5rem] font-roboto">
+      <div className="flex flex-col w-[52rem] h-fit font-bold bg-white-primary rounded-[0.5rem] font-roboto sm:w-full">
         <Header />
         <div className="flex flex-col h-full overflow-hidden gap-[1rem] my-[1.5rem]">
           {podcasts.map((podcast, index) => {

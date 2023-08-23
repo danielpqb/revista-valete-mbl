@@ -13,8 +13,8 @@ export function Valetecast() {
 
 function Brief() {
   return (
-    <div className="flex justify-between">
-      <p className="flex w-[31rem] flex-col font-light text-[1.125rem] leading-[1.8rem]">
+    <div className="flex justify-between sm:flex-col">
+      <p className="flex w-[31rem] flex-col font-light text-[1.125rem] leading-[1.8rem] sm:w-full">
         Toda semana estamos no spaces no Twitter. Com a condução de Pedro
         D’Eyrot, cada space enfrenta um tema contemporâneo trazendo
         especialistas e convidados.

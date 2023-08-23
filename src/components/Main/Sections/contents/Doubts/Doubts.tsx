@@ -55,7 +55,7 @@ function Title() {
 
 function FAQsContainer() {
   return (
-    <div className="flex flex-col items-center w-[48rem] font-roboto">
+    <div className="flex flex-col items-center w-[48rem] font-roboto sm:w-full">
       <div className="flex flex-col gap-2 w-full">
         {mock.map((answer, index) => {
           return (

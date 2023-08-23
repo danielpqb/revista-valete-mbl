@@ -12,13 +12,13 @@ export function Header(props: HeaderProps) {
   const [selectedSection, setSelectedSection] = useState("concept");
 
   return (
-    <header className="w-full h-32 flex flex-col fixed z-10 bg-white-primary">
+    <header className="flex flex-col w-full h-32 fixed z-50 bg-white-primary sm:max-w-[var(--vw)]">
       <img
         src="/images/main-logo.svg"
-        className="absolute top-4 left-0 right-0 m-auto"
+        className="absolute top-4 left-0 right-0 m-auto sm:top-[1.75rem] sm:left-[1.5rem] sm:m-0 sm:h-[3rem]"
       ></img>
       <div className="w-full h-24 relative flex justify-center font-roboto font-semibold text-[0.875rem]">
-        <div className="w-full max-w-6xl flex justify-end gap-[1.5rem]">
+        <div className="w-full max-w-6xl flex justify-end gap-[1.5rem] sm:hidden">
           <div className="flex items-center">
             <NextLink
               href={"https://clube.mbl.org.br/pagamento?off=43uioh"}
@@ -43,7 +43,7 @@ export function Header(props: HeaderProps) {
           </div>
         </div>
       </div>
-      <div className="flex flex-1 items-center justify-center font-normal text-[1rem]">
+      <div className="flex flex-1 items-center justify-center font-normal text-[1rem] sm:hidden">
         {sections.map((section, index) => {
           return (
             <SectionLabel

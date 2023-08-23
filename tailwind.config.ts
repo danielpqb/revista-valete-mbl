@@ -9,6 +9,10 @@ const config: Config = {
 
   theme: {
     extend: {
+      screens: {
+        sm: { max: "600px" },
+        "min-sm": { min: "600px" },
+      },
       fontFamily: {
         calisto: ["var(--font-calisto)"],
         roboto: ["var(--font-roboto)"],

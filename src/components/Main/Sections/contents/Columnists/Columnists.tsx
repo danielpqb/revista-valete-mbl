@@ -2,7 +2,7 @@ import { Carousel } from "./Carousel";
 
 export function Columnists() {
   return (
-    <div className="flex flex-col gap-[4rem]">
+    <div className="flex flex-col gap-[4rem] sm:hidden">
       <Brief />
       <Carousel />
     </div>

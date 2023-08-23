@@ -4,7 +4,7 @@ import NextLink from "next/link";
 
 export function Concept() {
   return (
-    <div className="flex gap-[2.5rem]">
+    <div className="flex gap-[2.5rem] sm:flex-col">
       <div className="flex flex-col flex-1 gap-[2.5rem]">
         <h1 className="text-[2.5rem] font-bold leading-[3rem]">
           Com edição exclusivamente impressa, a Revista Valete é única!
