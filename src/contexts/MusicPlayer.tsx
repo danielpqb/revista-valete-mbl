@@ -73,13 +73,15 @@ export function MusicPlayerContextProvider({
   function changeTrack(id: number) {
     for (const podcast of podcasts) {
       if (podcast.id === id) {
-        audioElem.current.src = podcast.audio;
+        if (podcastPlaying.id === id) {
+          playPause();
+          return;
+        }
 
+        audioElem.current.src = podcast.audio;
         setPodcastPlaying(() => {
           return podcast;
         });
-
-        return;
       }
     }
   }
