@@ -3,6 +3,7 @@
 import { Footer } from "@/components/Footer/Footer";
 import { Header } from "@/components/Header/Header";
 import { Main } from "@/components/Main/Main";
+import { Sidebars } from "@/components/Sidebars/Sidebars";
 import { useEffect } from "react";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
   return (
     <>
       <Header />
+      <Sidebars />
       <Main />
       <Footer />
     </>
