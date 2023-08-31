@@ -42,10 +42,16 @@ export function Header(props: HeaderProps) {
                 </div>
               </NextLink>
             </div>
-            <div className="flex items-center gap-[0.5rem]">
-              <CustomIcon.User className="text-[1.25rem]" />
-              <button className="active:scale-[0.9] select-none">Login</button>
-            </div>
+            <NextLink
+              href={"https://exclusivo.mbl.org.br/auth/login?redirect=/"}
+              target="_blank"
+              className="self-center active:scale-[0.9] select-none"
+            >
+              <div className="flex items-center gap-[0.5rem] h-fit cursor-pointer">
+                <CustomIcon.User className="text-[1.25rem]" />
+                <button className="">Login</button>
+              </div>
+            </NextLink>
             <div className="flex items-center">
               <button className="active:scale-[0.9] select-none">
                 <IonIcon
