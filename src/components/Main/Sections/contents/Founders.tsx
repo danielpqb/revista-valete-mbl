@@ -60,7 +60,7 @@ export function Founders() {
   return (
     <div
       style={{ maxHeight: `${approximateHeight}rem` }}
-      className={`flex flex-col items-center flex-wrap px-14 gap-[2rem] sm:hidden`}
+      className={`flex flex-col items-center flex-wrap px-14 gap-[2rem]`}
     >
       {jsxArray}
     </div>

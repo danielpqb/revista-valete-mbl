@@ -11,6 +11,7 @@ import { Podcast2 } from "./svg/Podcast2";
 import { Podcast3 } from "./svg/Podcast3";
 import { Spotify } from "./svg/Spotify";
 import { User } from "./svg/User";
+import { MenuList } from "./svg/MenuList";
 
 interface DivProps extends ComponentProps<"div"> {}
 function Container(props: DivProps) {
@@ -98,6 +99,13 @@ export const CustomIcon = {
     return (
       <Container className={props.className}>
         <User />
+      </Container>
+    );
+  },
+  MenuList: (props: DivProps) => {
+    return (
+      <Container className={props.className}>
+        <MenuList />
       </Container>
     );
   },

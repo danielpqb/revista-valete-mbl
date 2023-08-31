@@ -19,10 +19,11 @@ interface SectionProps extends ComponentProps<"section"> {
 }
 
 function Root(props: SectionProps) {
+  const className = "flex flex-col w-full max-w-6xl " + props.className;
   return (
     <section
       id={props.id}
-      className="flex flex-col w-full max-w-6xl"
+      className={className}
     >
       <Title>{props.title}</Title>
       {props.children}

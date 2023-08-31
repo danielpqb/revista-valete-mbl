@@ -7,7 +7,7 @@ import NextLink from "next/link";
 interface MainProps extends ComponentProps<"main"> {}
 export function Main(props: MainProps) {
   return (
-    <main className="w-full flex flex-col m-auto items-center pt-[11rem] gap-[6rem] mb-[5rem] sm:w-[90%]">
+    <main className="w-full flex flex-col m-auto items-center pt-[11rem] gap-[6rem] mb-[5rem] sm:w-[90%] sm:pt-[7rem] sm:gap-[3rem]">
       <PosterTop />
       <Section.Root
         id="concept"
@@ -24,12 +24,14 @@ export function Main(props: MainProps) {
       <Section.Root
         id="columnists"
         title="Colunistas"
+        className="sm:hidden"
       >
         <Section.Columnists />
       </Section.Root>
       <Section.Root
         id="founders"
         title="Fundadores"
+        className="sm:hidden"
       >
         <Section.Founders />
       </Section.Root>
@@ -81,39 +83,86 @@ function PosterTop() {
 
 function PosterBottom() {
   return (
-    <div className="flex relative m-auto w-full max-w-6xl font-roboto text-blue-primary">
-      <div className="flex flex-col absolute p-[5.5rem] w-[55%] h-full justify-between items-start sm:w-full">
-        <div className="flex justify-center items-end">
-          <h1 className="font-calisto text-[3rem] font-bold leading-[3.6rem] text-white-primary">
-            Apenas R$ 150,00
-          </h1>
-          <h2 className="font-calisto text-[1.5rem] font-bold text-white-primary ml-3">
-            /mês
-          </h2>
-        </div>
-        <span className="font-inter text-[0.75rem] font-normal mb-[1.5rem]">
-          *Renovação automática
-        </span>
-        <p className="text-[1.125rem] font-light leading-[1.6875rem] mb-[3rem]">
-          Receba mensalmente em sua casa a Revista Valete, a única revista de
-          cultura e política do país que promete vencer a hegemonia cultural da
-          esquerda
-        </p>
-        <NextLink
-          href={"https://clube.mbl.org.br/pagamento?off=43uioh"}
-          target="_blank"
-        >
-          <div className="flex w-fit bg-blue-secondary text-white-primary px-4 py-2 font-semibold font-roboto mb-[0.8rem] gap-[0.5rem] active:scale-[0.9] select-none">
-            <h1>Assine a Valete</h1>
-            <IonIcon name="arrow-forward"></IonIcon>
+    <>
+      {/* Desktop */}
+      <div className="flex relative m-auto w-full max-w-6xl font-roboto text-blue-primary sm:hidden">
+        <div className="flex flex-col absolute p-[5.5rem] w-[55%] h-full justify-between items-start">
+          <div className="flex justify-center items-end">
+            <h1 className="font-calisto text-[3rem] font-bold leading-[3.6rem] text-white-primary">
+              Apenas R$ 150,00
+            </h1>
+            <h2 className="font-calisto text-[1.5rem] font-bold text-white-primary ml-3">
+              /mês
+            </h2>
           </div>
-        </NextLink>
+          <span className="font-inter text-[0.75rem] font-normal mb-[1.5rem]">
+            *Renovação automática
+          </span>
+          <p className="text-[1.125rem] font-light leading-[1.6875rem] mb-[3rem]">
+            Receba mensalmente em sua casa a Revista Valete, a única revista de
+            cultura e política do país que promete vencer a hegemonia cultural
+            da esquerda
+          </p>
+          <NextLink
+            href={"https://clube.mbl.org.br/pagamento?off=43uioh"}
+            target="_blank"
+          >
+            <div className="flex w-fit bg-blue-secondary text-white-primary px-4 py-2 font-semibold font-roboto mb-[0.8rem] gap-[0.5rem] active:scale-[0.9] select-none">
+              <h1>Assine a Valete</h1>
+              <IonIcon name="arrow-forward"></IonIcon>
+            </div>
+          </NextLink>
+        </div>
+        <img src="/images/poster02/photo-blue-bg.png" />
+        <img
+          className="absolute h-full right-[6rem]"
+          src="/images/poster02/revista1.png"
+        />
       </div>
-      <img src="/images/poster02/photo-blue-bg.png" />
-      <img
-        className="absolute h-full right-[6rem]"
-        src="/images/poster02/revista1.png"
-      />
-    </div>
+
+      {/* Mobile */}
+      <div className="flex relative m-auto w-full h-[41rem] font-roboto text-blue-primary bg-[url('/images/poster02/photo-blue-bg.png')] min-sm:hidden">
+        <div className="flex flex-col absolute justify-between items-start w-full p-[1.5rem] py-[2.5rem] h-full">
+          {/* Row 1 */}
+          <div className="flex flex-col mb-[1.5rem]">
+            <div className="flex justify-center items-end mb-[0.5rem]">
+              <h1 className="font-calisto text-[2rem] font-bold leading-[2.2rem] text-white-primary">
+                Apenas R$ 150,00
+              </h1>
+              <h2 className="font-calisto text-[0.875rem] font-bold text-white-primary ml-3">
+                /mês
+              </h2>
+            </div>
+            <span className="font-inter text-[0.75rem] font-normal">
+              *Renovação automática
+            </span>
+          </div>
+          {/* Row 2 */}
+          <p className="text-[0.875rem] font-light leading-[1.3125rem]">
+            Receba mensalmente em sua casa a Revista Valete, a única revista de
+            cultura e política do país que promete vencer a hegemonia cultural
+            da esquerda
+          </p>
+
+          {/* Row 3 */}
+          <img
+            className=""
+            src="/images/poster02/revista1.png"
+          />
+
+          {/* Row 4 */}
+          <NextLink
+            href={"https://clube.mbl.org.br/pagamento?off=43uioh"}
+            target="_blank"
+            className="flex w-full items-center justify-center"
+          >
+            <div className="flex w-full h-[3rem] items-center justify-center self-center bg-blue-secondary text-[1.125rem] text-white-primary px-4 py-2 font-semibold font-roboto gap-[0.5rem] active:scale-[0.9] select-none">
+              <h1>Assine a Valete</h1>
+              <IonIcon name="arrow-forward"></IonIcon>
+            </div>
+          </NextLink>
+        </div>
+      </div>
+    </>
   );
 }

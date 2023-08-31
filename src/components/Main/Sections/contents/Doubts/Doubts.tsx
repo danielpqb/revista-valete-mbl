@@ -34,7 +34,7 @@ const mock = [
 
 export function Doubts() {
   return (
-    <div className="relative flex flex-col gap-[4rem] items-center">
+    <div className="relative flex flex-col gap-[4rem] items-center sm:gap-[2rem]">
       <Title />
       <FAQsContainer />
       <Contact />
@@ -46,7 +46,7 @@ export function Doubts() {
 function Title() {
   return (
     <div className="flex flex-col items-center">
-      <h1 className="text-[2.5rem] leading-[3rem] font-bold">
+      <h1 className="text-[2.5rem] leading-[3rem] font-bold sm:text-[1.5rem] sm:leading-[1.8rem]">
         F.A.Q. Revista Valete
       </h1>
     </div>
@@ -56,7 +56,7 @@ function Title() {
 function FAQsContainer() {
   return (
     <div className="flex flex-col items-center w-[48rem] font-roboto sm:w-full">
-      <div className="flex flex-col gap-2 w-full">
+      <div className="flex flex-col gap-2 w-full h-fit">
         {mock.map((answer, index) => {
           return (
             <FAQ
@@ -73,7 +73,7 @@ function FAQsContainer() {
 
 function Contact() {
   return (
-    <div className="flex flex-col items-center gap-[1.5rem]">
+    <div className="flex flex-col items-center gap-[1.5rem] sm:text-center">
       <div className="flex flex-col items-center gap-[2.5rem]">
         <h1 className="text-[1.5rem] leading-[1.8rem] font-bold">
           Tem mais dúvidas?

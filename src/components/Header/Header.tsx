@@ -12,52 +12,66 @@ export function Header(props: HeaderProps) {
   const [selectedSection, setSelectedSection] = useState("concept");
 
   return (
-    <header className="flex flex-col w-full h-32 fixed z-50 bg-white-primary sm:max-w-[var(--vw)]">
-      <img
-        src="/images/main-logo.svg"
-        className="absolute top-4 left-0 right-0 m-auto sm:top-[1.75rem] sm:left-[1.5rem] sm:m-0 sm:h-[3rem]"
-      ></img>
-      <div className="w-full h-24 relative flex justify-center font-roboto font-semibold text-[0.875rem]">
-        <div className="w-full max-w-6xl flex justify-end gap-[1.5rem] sm:hidden">
-          <div className="flex items-center">
-            <NextLink
-              href={"https://clube.mbl.org.br/pagamento?off=43uioh"}
-              target="_blank"
-            >
-              <div className="bg-blue-secondary text-white-primary px-4 py-2 active:scale-[0.9] select-none">
-                Assine a Valete
-              </div>
-            </NextLink>
-          </div>
-          <div className="flex items-center gap-[0.5rem]">
-            <CustomIcon.User className="text-[1.25rem]" />
-            <button className="active:scale-[0.9] select-none">Login</button>
-          </div>
-          <div className="flex items-center">
-            <button className="active:scale-[0.9] select-none">
-              <IonIcon
-                name="search-outline"
-                className="text-[1.25rem]"
-              />
-            </button>
+    <>
+      {/* Mobile */}
+      <header className="flex flex-col w-full fixed z-50 bg-white-primary max-w-[var(--vw)] min-sm:hidden">
+        <div className="flex border-b-[0.0625rem] border-b-brown-primary p-[1.2rem] justify-between">
+          <img
+            src="/images/main-logo.svg"
+            className="h-[3rem]"
+          />
+          <CustomIcon.MenuList className="text-[2rem]" />
+        </div>
+      </header>
+
+      {/* Desktop */}
+      <header className="flex flex-col w-full h-32 fixed z-50 bg-white-primary sm:hidden">
+        <img
+          src="/images/main-logo.svg"
+          className="absolute top-4 left-0 right-0 m-auto"
+        />
+        <div className="w-full h-24 relative flex justify-center font-roboto font-semibold text-[0.875rem]">
+          <div className="w-full max-w-6xl flex justify-end gap-[1.5rem]">
+            <div className="flex items-center">
+              <NextLink
+                href={"https://clube.mbl.org.br/pagamento?off=43uioh"}
+                target="_blank"
+              >
+                <div className="bg-blue-secondary text-white-primary px-4 py-2 active:scale-[0.9] select-none">
+                  Assine a Valete
+                </div>
+              </NextLink>
+            </div>
+            <div className="flex items-center gap-[0.5rem]">
+              <CustomIcon.User className="text-[1.25rem]" />
+              <button className="active:scale-[0.9] select-none">Login</button>
+            </div>
+            <div className="flex items-center">
+              <button className="active:scale-[0.9] select-none">
+                <IonIcon
+                  name="search-outline"
+                  className="text-[1.25rem]"
+                />
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-      <div className="flex flex-1 items-center justify-center font-normal text-[1rem] sm:hidden">
-        {sections.map((section, index) => {
-          return (
-            <SectionLabel
-              section={section}
-              key={index}
-              className="px-6 border-b-[4px] border-black-primary"
-              selectedSection={selectedSection}
-              setSelectedSection={setSelectedSection}
-            />
-          );
-        })}
-      </div>
-      <div className="border-b-[0.0625rem] border-b-brown-primary"></div>
-    </header>
+        <div className="flex flex-1 items-center justify-center font-normal text-[1rem] sm:hidden">
+          {sections.map((section, index) => {
+            return (
+              <SectionLabel
+                section={section}
+                key={index}
+                className="px-6 border-b-[4px] border-black-primary"
+                selectedSection={selectedSection}
+                setSelectedSection={setSelectedSection}
+              />
+            );
+          })}
+        </div>
+        <div className="border-b-[0.0625rem] border-b-brown-primary"></div>
+      </header>
+    </>
   );
 }
 interface SectionLabelProps extends ComponentProps<"button"> {

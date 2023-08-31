@@ -19,7 +19,7 @@ function Brief() {
         D’Eyrot, cada space enfrenta um tema contemporâneo trazendo
         especialistas e convidados.
       </p>
-      <div className="flex flex-col gap-[1.5rem]">
+      <div className="flex flex-col gap-[1.5rem] sm:items-center sm:mt-[3rem]">
         <h1 className="flex w-fit font-roboto text-[1.125rem] leading-[1.35rem] font-bold">
           Disponível no
         </h1>

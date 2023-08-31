@@ -16,7 +16,7 @@ export function Bar() {
         const newPercentage = clickedWidth / maxWidth;
         changeCurrentTime(newPercentage);
       }}
-      className="absolute left-0 bottom-0 w-full h-[0.4rem] bg-brown-primary"
+      className="absolute left-0 bottom-0 w-full h-[0.4rem] bg-brown-primary sm:relative"
     >
       <div
         style={{ width: `${audioData.percentage}%` }}
