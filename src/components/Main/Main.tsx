@@ -121,8 +121,8 @@ function PosterBottom() {
       </div>
 
       {/* Mobile */}
-      <div className="flex relative m-auto w-full h-[41rem] font-roboto text-blue-primary bg-[url('/images/poster02/photo-blue-bg.png')] min-sm:hidden">
-        <div className="flex flex-col absolute justify-between items-start w-full p-[1.5rem] py-[2.5rem] h-full">
+      <div className="flex m-auto w-full h-fit font-roboto text-blue-primary bg-[url('/images/poster02/photo-blue-bg.png')] min-sm:hidden aspect-[1/2]">
+        <div className="flex flex-col justify-between items-start w-full h-full p-[1.5rem] py-[2.5rem]">
           {/* Row 1 */}
           <div className="flex flex-col mb-[1.5rem]">
             <div className="flex justify-center items-end mb-[0.5rem]">
@@ -146,7 +146,7 @@ function PosterBottom() {
 
           {/* Row 3 */}
           <img
-            className=""
+            className="self-center"
             src="/images/poster02/revista1.png"
           />
 
