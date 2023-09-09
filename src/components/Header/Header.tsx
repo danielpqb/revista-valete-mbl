@@ -10,6 +10,7 @@ import { Link } from "react-scroll";
 interface HeaderProps extends ComponentProps<"header"> {}
 export function Header(props: HeaderProps) {
   const [selectedSection, setSelectedSection] = useState("concept");
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
     <>
@@ -20,7 +21,19 @@ export function Header(props: HeaderProps) {
             src="/images/main-logo.svg"
             className="h-[3rem]"
           />
-          <CustomIcon.MenuList className="text-[2rem]" />
+          <button
+            onClick={() => {
+              setIsMobileMenuOpen(!isMobileMenuOpen);
+            }}
+          >
+            <CustomIcon.MenuList className="text-[2rem]" />
+          </button>
+          <MobileMenu
+            isMobileMenuOpen={isMobileMenuOpen}
+            setIsMobileMenuOpen={setIsMobileMenuOpen}
+            selectedSection={selectedSection}
+            setSelectedSection={setSelectedSection}
+          />
         </div>
       </header>
 
@@ -80,6 +93,105 @@ export function Header(props: HeaderProps) {
     </>
   );
 }
+
+function MobileMenu(props: any) {
+  return (
+    <>
+      <div
+        style={{ display: props.isMobileMenuOpen ? "flex" : "none" }}
+        className="fixed top-0 left-0 w-[100vw] h-[100vh] bg-[rgba(0,0,0,0.7)] filter-[blur(1)]"
+      />
+
+      <div
+        style={{ display: props.isMobileMenuOpen ? "flex" : "none" }}
+        className="fixed flex right-0 top-0 w-[75%] h-full z-10 bg-white-primary flex-col"
+      >
+        {/* Login and Search */}
+        <div className="h-[5.35rem] w-full flex justify-end px-[1.5rem] border-b-[1px] border-b-brown-primary mb-[4.5rem]">
+          <button
+            onClick={() => {
+              props.setIsMobileMenuOpen(false);
+            }}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="19"
+              viewBox="0 0 20 19"
+              fill="none"
+            >
+              <rect
+                x="2.22192"
+                y="3.8147e-06"
+                width="24"
+                height="2"
+                transform="rotate(45 2.22192 3.8147e-06)"
+                fill="#121212"
+              />
+              <rect
+                x="0.807617"
+                y="16.9706"
+                width="24"
+                height="2"
+                transform="rotate(-45 0.807617 16.9706)"
+                fill="#121212"
+              />
+            </svg>
+          </button>
+        </div>
+        <NextLink
+          href={"https://exclusivo.mbl.org.br/auth/login?redirect=/"}
+          target="_blank"
+          className="self-center active:scale-[0.9] select-none"
+        >
+          <div className="flex items-center gap-[0.5rem] h-fit cursor-pointer">
+            <CustomIcon.User className="text-[1.25rem]" />
+            <button className="font-bold font-roboto">Login</button>
+          </div>
+        </NextLink>
+        <div className="flex items-center justify-center mt-[2rem] mb-[4.5rem]">
+          <button className="active:scale-[0.9] select-none flex">
+            <IonIcon
+              name="search-outline"
+              className="text-[1.25rem]"
+            />
+            <div className="ml-[0.5rem] font-bold font-roboto">Localizar</div>
+          </button>
+        </div>
+
+        {/* Sections */}
+        <div className="flex flex-1 flex-col items-center font-normal text-[1.125rem] gap-[3rem]">
+          {sections.map((section, index) => {
+            return (
+              <MobileSectionLabel
+                section={section}
+                key={index}
+                className="px-6 border-b-[4px] border-black-primary"
+                selectedSection={props.selectedSection}
+                setSelectedSection={props.setSelectedSection}
+                setIsMobileMenuOpen={props.setIsMobileMenuOpen}
+              />
+            );
+          })}
+        </div>
+
+        {/* Button */}
+        <div className="flex items-center justify-center mb-[2rem] w-full text-[0.875rem] font-semibold font-roboto">
+          <NextLink
+            href={"https://clube.mbl.org.br/pagamento?off=43uioh"}
+            target="_blank"
+            className="w-full mx-[1.5rem] flex text-center"
+          >
+            <div className="bg-blue-secondary text-white-primary px-4 py-2 active:scale-[0.9] select-none w-full">
+              Assine a Valete
+            </div>
+          </NextLink>
+        </div>
+      </div>
+    </>
+  );
+}
+
 interface SectionLabelProps extends ComponentProps<"button"> {
   section: { id: string; title: string };
   selectedSection: string;
@@ -127,6 +239,39 @@ function SectionLabel(props: SectionLabelProps) {
           props.setSelectedSection(props.section.id);
         }}
         className="px-6 h-full border-black-primary"
+      >
+        {props.section.title}
+      </button>
+    </Link>
+  );
+}
+
+function MobileSectionLabel(
+  props: SectionLabelProps & { setIsMobileMenuOpen: any }
+) {
+  if (
+    props.section.id === "events" ||
+    props.section.id === "founders" ||
+    props.section.id === "columnists"
+  ) {
+    return <></>;
+  }
+
+  return (
+    <Link
+      className=""
+      to={props.section.id}
+      spy={true}
+      smooth={true}
+      offset={-120}
+      duration={500}
+    >
+      <button
+        onClick={() => {
+          props.setSelectedSection(props.section.id);
+          props.setIsMobileMenuOpen(false);
+        }}
+        className="h-fit"
       >
         {props.section.title}
       </button>
