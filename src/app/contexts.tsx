@@ -1,4 +1,5 @@
 import { MusicPlayerContextProvider } from "@/contexts/MusicPlayer";
+import { MapedComponentsContextProvider } from "@/contexts/MapedComponents";
 import { ReactNode } from "react";
 
 export default function ContextProviders({
@@ -8,7 +9,9 @@ export default function ContextProviders({
 }) {
   return (
     <>
-      <MusicPlayerContextProvider>{children}</MusicPlayerContextProvider>
+      <MapedComponentsContextProvider>
+        <MusicPlayerContextProvider>{children}</MusicPlayerContextProvider>
+      </MapedComponentsContextProvider>
     </>
   );
 }

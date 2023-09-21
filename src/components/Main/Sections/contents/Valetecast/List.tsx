@@ -4,7 +4,7 @@ import IonIcon from "@/components/IonIcon/IonIcon";
 import { useMusicPlayerContext } from "@/contexts/MusicPlayer";
 import { podcasts } from "@/data/podcasts";
 import { convertSecondsToTime } from "@/utils/functions/time";
-import { Dispatch, SetStateAction, useState } from "react";
+import React, { useState } from "react";
 import { Bar } from "./Bar";
 
 export function List() {
@@ -182,7 +182,7 @@ function Podcast(props: PodcastProps) {
 
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <>
+    <React.Fragment key={props.data.id}>
       {/* Desktop */}
       <div
         style={isOpen ? { height: "fit-content" } : {}}
@@ -318,6 +318,6 @@ function Podcast(props: PodcastProps) {
           </div>
         </div>
       </div>
-    </>
+    </React.Fragment>
   );
 }

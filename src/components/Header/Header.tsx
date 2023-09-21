@@ -1,15 +1,15 @@
 "use client";
 
 import { sections } from "@/data/sections";
-import { ComponentProps, Dispatch, SetStateAction, useState } from "react";
+import { ComponentProps, useState } from "react";
 import IonIcon from "../IonIcon/IonIcon";
 import { CustomIcon } from "../CustomIcons/CustomIcons";
 import NextLink from "next/link";
 import { Link } from "react-scroll";
+import { useMapedComponentsContext } from "@/contexts/MapedComponents";
 
 interface HeaderProps extends ComponentProps<"header"> {}
 export function Header(props: HeaderProps) {
-  const [selectedSection, setSelectedSection] = useState("concept");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
@@ -31,8 +31,6 @@ export function Header(props: HeaderProps) {
           <MobileMenu
             isMobileMenuOpen={isMobileMenuOpen}
             setIsMobileMenuOpen={setIsMobileMenuOpen}
-            selectedSection={selectedSection}
-            setSelectedSection={setSelectedSection}
           />
         </div>
       </header>
@@ -82,8 +80,6 @@ export function Header(props: HeaderProps) {
                 section={section}
                 key={index}
                 className="px-6 border-b-[4px] border-black-primary"
-                selectedSection={selectedSection}
-                setSelectedSection={setSelectedSection}
               />
             );
           })}
@@ -167,8 +163,6 @@ function MobileMenu(props: any) {
                 section={section}
                 key={index}
                 className="px-6 border-b-[4px] border-black-primary"
-                selectedSection={props.selectedSection}
-                setSelectedSection={props.setSelectedSection}
                 setIsMobileMenuOpen={props.setIsMobileMenuOpen}
               />
             );
@@ -194,10 +188,10 @@ function MobileMenu(props: any) {
 
 interface SectionLabelProps extends ComponentProps<"button"> {
   section: { id: string; title: string };
-  selectedSection: string;
-  setSelectedSection: Dispatch<SetStateAction<string>>;
 }
 function SectionLabel(props: SectionLabelProps) {
+  const { nearestComponent } = useMapedComponentsContext();
+
   if (props.section.id === "events") {
     return (
       <NextLink
@@ -205,16 +199,7 @@ function SectionLabel(props: SectionLabelProps) {
         target="_blank"
         className="h-full"
       >
-        <button
-          style={{
-            borderBottomWidth:
-              props.selectedSection === props.section.id ? "0.2rem" : "0rem",
-          }}
-          onClick={() => {
-            props.setSelectedSection(props.section.id);
-          }}
-          className="px-6 h-full border-black-primary"
-        >
+        <button className="px-6 h-full border-black-primary">
           {props.section.title}
         </button>
       </NextLink>
@@ -223,7 +208,7 @@ function SectionLabel(props: SectionLabelProps) {
 
   return (
     <Link
-      className="h-full"
+      className="h-full transition-all duration-500"
       to={props.section.id}
       spy={true}
       smooth={true}
@@ -233,10 +218,7 @@ function SectionLabel(props: SectionLabelProps) {
       <button
         style={{
           borderBottomWidth:
-            props.selectedSection === props.section.id ? "0.2rem" : "0rem",
-        }}
-        onClick={() => {
-          props.setSelectedSection(props.section.id);
+            nearestComponent === props.section.id ? "0.2rem" : "0rem",
         }}
         className="px-6 h-full border-black-primary"
       >
@@ -268,7 +250,6 @@ function MobileSectionLabel(
     >
       <button
         onClick={() => {
-          props.setSelectedSection(props.section.id);
           props.setIsMobileMenuOpen(false);
         }}
         className="h-fit"
